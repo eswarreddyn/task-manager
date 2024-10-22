@@ -1,0 +1,16 @@
+.toolbar-wrap {
+    background-color: #004f4f;
+    color: #fff;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.example-button-container a {
+    color: #fff;
+    font-weight: 100;
+}
+.example-button-container a.active{
+    font-weight: bold;
+}

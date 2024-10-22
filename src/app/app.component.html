@@ -1,0 +1,15 @@
+<mat-toolbar class="toolbar-wrap">
+  <h2 class="page-header">Task Manager</h2>
+  <span class="example-spacer"></span>
+  <section>
+    <div class="example-button-row">
+      <div class="example-button-container">
+        <a mat-button routerLink="/task_list" routerLinkActive="active">
+          <mat-icon>list</mat-icon>View List</a>
+        <a mat-button routerLink="/create_task" routerLinkActive="active">
+          <mat-icon>add</mat-icon>Add</a>
+      </div>
+    </div>
+  </section>
+</mat-toolbar>
+<router-outlet />

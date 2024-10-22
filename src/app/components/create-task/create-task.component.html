@@ -1,0 +1,23 @@
+<form [formGroup]="taskForm">
+    <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Priority</mat-label>
+        <mat-select [(value)]="selectedPriority" (valueChange)="getPriority()" formControlName="priority">
+            @for (item of priorities; track item) {
+            <mat-option value="{{item}}">{{item}}</mat-option>
+            }
+        </mat-select>
+    </mat-form-field>
+    <button mat-flat-button type="button" (click)="onSubmit()" [disabled]="!taskForm.valid">{{updateView ? 'Update' : 'Create'}} Task</button>
+    @if (updateView) {
+        <br/>
+        <button mat-flat-button type="button" (click)="gotoListPage()">Cancel</button>
+    }
+</form>
