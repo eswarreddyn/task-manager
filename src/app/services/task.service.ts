@@ -11,9 +11,9 @@ export class TaskService {
   }
   checkLocalStorageData() {
     const todoKeyData = this.getTasksFromStorage();
-    if (todoKeyData && todoKeyData.length>0) {
-        this.tasks = todoKeyData;
-        this.router.navigate(['/task_list']);
+    if (todoKeyData && todoKeyData.length > 0) {
+      this.tasks = todoKeyData;
+      this.router.navigate(['/task_list']);
     } else {
       this.tasks = [];
       this.router.navigate(['/home']);
@@ -22,14 +22,14 @@ export class TaskService {
 
   getTasks(): Task[] {
     const storageData = this.getTasksFromStorage();
-    if(storageData && storageData.length>0){
+    if (storageData && storageData.length > 0) {
       this.tasks = storageData;
     } else {
       this.tasks = [];
     }
     return this.tasks;
   }
-  getTasksFromStorage(){
+  getTasksFromStorage() {
     const todoKeyData = localStorage.getItem('todoData');
     if (todoKeyData) {
       const todoKeyDataValue = JSON.parse(todoKeyData);

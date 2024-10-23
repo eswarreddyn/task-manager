@@ -20,38 +20,49 @@
 .list_parent {
     width: 100%;
 }
-form{
+
+form {
     width: 95%;
 }
+
 .list_option {
     flex-direction: row-reverse;
     margin: 5px 0;
 }
-.High{
-    border-left: 5px solid  rgb(255,0,0,0.3);
+
+.High {
+    border-left: 5px solid rgb(255, 0, 0, 0.3);
 }
-.Medium{
-    border-left: 5px solid  rgb(255,255,0,0.3);
+
+.Medium {
+    border-left: 5px solid rgb(255, 255, 0, 0.3);
 }
-.Low{
-    border-left: 5px solid  rgb(0,255,85,0.3);
+
+.Low {
+    border-left: 5px solid rgb(0, 255, 85, 0.3);
 }
-::ng-deep .mat-mdc-list-item-unscoped-content.mdc-list-item__secondary-text{
-    line-height: 0!important;
+
+::ng-deep .mat-mdc-list-item-unscoped-content.mdc-list-item__secondary-text {
+    line-height: 0 !important;
 }
-::ng-deep .mat-mdc-list-item-unscoped-content.mdc-list-item__secondary-text::before{
+
+::ng-deep .mat-mdc-list-item-unscoped-content.mdc-list-item__secondary-text::before {
     height: 0;
 }
+
 .title {
     color: #0b9292;
 }
-.text-center{
+
+.text-center {
     text-align: center;
 }
-.delete-btn:not(:disabled){
+
+.delete-btn:not(:disabled) {
     background-color: brown;
 }
-.disp-flex{
+
+.disp-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;

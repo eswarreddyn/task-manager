@@ -1,4 +1,5 @@
 <form [formGroup]="taskForm">
+    <h2>{{updateView ? 'Update' : 'Create'}} Task</h2>
     <mat-form-field>
         <mat-label>Title</mat-label>
         <input matInput formControlName="title">
@@ -15,9 +16,10 @@
             }
         </mat-select>
     </mat-form-field>
-    <button mat-flat-button type="button" (click)="onSubmit()" [disabled]="!taskForm.valid">{{updateView ? 'Update' : 'Create'}} Task</button>
+    <button mat-flat-button type="button" (click)="onSubmit()" [disabled]="!taskForm.valid">{{updateView ? 'Update' :
+        'Create'}} Task</button>
     @if (updateView) {
-        <br/>
-        <button mat-flat-button type="button" (click)="gotoListPage()">Cancel</button>
+    <br />
+    <button mat-flat-button type="button" (click)="gotoListPage()">Cancel</button>
     }
 </form>

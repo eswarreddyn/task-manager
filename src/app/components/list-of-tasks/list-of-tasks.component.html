@@ -1,28 +1,28 @@
 <div class="list_wrap">
     @if (tasks.length>0) {
-        <form [formGroup]="taskListForm">
-            <div class="text-center">
-                <button mat-flat-button (click)="deleteSelected()" class="delete-btn"
+    <form [formGroup]="taskListForm">
+        <div class="text-center">
+            <button mat-flat-button (click)="deleteSelected()" class="delete-btn"
                 [disabled]="!taskListForm.controls['listControl'].value || (taskListForm.controls['listControl'].value && taskListForm.controls['listControl'].value.length<1)">
                 <mat-icon>delete</mat-icon>Delete</button>
-            </div>
-            <mat-selection-list #shoes class="list_parent" formControlName="listControl" name="listControl">
-                @for (task of tasks; track $index) {
-                <mat-list-option class="list_option" [value]="task.id" [ngClass]="task.priority">
-                    <div class="disp-flex">
-                        <div>
-                            <span matListItemTitle>{{task.title}}</span>
-                            <span matListItemLine>{{task.description}}</span>
-                        </div>
-                        <div>
-                            <button mat-button type="button" (click)="viewTask(task.id)">View</button>
-                        </div>
+        </div>
+        <mat-selection-list #shoes class="list_parent" formControlName="listControl" name="listControl">
+            @for (task of tasks; track $index) {
+            <mat-list-option class="list_option" [value]="task.id" [ngClass]="task.priority">
+                <div class="disp-flex">
+                    <div>
+                        <span matListItemTitle>{{task.title}}</span>
+                        <span matListItemLine>{{task.description}}</span>
                     </div>
-                </mat-list-option>
-                }
-            </mat-selection-list>
-        </form>
+                    <div>
+                        <button mat-button type="button" (click)="viewTask(task.id)">View</button>
+                    </div>
+                </div>
+            </mat-list-option>
+            }
+        </mat-selection-list>
+    </form>
     } @else {
-        <app-no-task-exist></app-no-task-exist>
+    <app-no-task-exist></app-no-task-exist>
     }
 </div>

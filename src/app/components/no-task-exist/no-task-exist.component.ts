@@ -12,8 +12,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './no-task-exist.component.scss'
 })
 export class NoTaskExistComponent {
-  constructor(private taskService: TaskService){
+  constructor(private taskService: TaskService) {
     this.taskService.checkLocalStorageData();
   }
-
 }
